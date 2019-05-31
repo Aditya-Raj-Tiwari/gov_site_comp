@@ -1,0 +1,58 @@
+body{
+  background: #E4E4E0;
+  /*IF YOU REALLY WANT TO FORCE THE ISSUE*/
+
+}
+
+
+
+.heading_top{
+  background-color: #E4E4E0;
+  color: blue;
+}
+.welcome-message-red{
+  color: red;
+  font-size: 1.3em;
+}
+.welcome-message{
+  font-size: 1.3em;
+}
+
+.welcome-message-green{
+color:green;
+  font-size: 1.3em;
+}
+.welcome-info{
+  font-size: 0.9em;
+}
+.contact-info-div{
+  padding-right: 40px;
+  padding-top: 10px;
+
+}
+.any_headline_span{
+  text-decoration: underline;
+}
+.span_ghatana_tatha_samachar{
+
+}
+.samachar_div{
+  color: white;
+  background-color: #3a79d1;
+}
+
+.for_jumbotron{
+  height: 100%;
+  color: black;
+}
+.suchana_div{
+  border: 2px solid black;
+  border-top: 0px;
+  border-left: 0px;
+  background: #434259;
+
+}
+
+.manage_para{
+  font-size: 0.9em;
+}
