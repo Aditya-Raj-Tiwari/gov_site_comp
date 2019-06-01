@@ -31,3 +31,17 @@ class OrganizationDetail(models.Model):
     phone = models.TextField(max_length=20)
     email = models.TextField(max_length=100)
     website = models.TextField(max_length=100)
+
+
+
+class GaupalikaBare(models.Model):
+    jesthaNagarik = models.TextField(max_length=20)
+    dalit = models.TextField(max_length=100)
+    bidhuwa = models.TextField(max_length=100)
+    aakal_mahila = models.TextField(max_length=100)
+    aapanga = models.TextField(max_length=100)
+    dalit = models.TextField(max_length=100)
+    balbalika = models.TextField(max_length=100)
+    balbalika = models.TextField(max_length=100)
+    jamma = models.TextField(max_length=100)
+

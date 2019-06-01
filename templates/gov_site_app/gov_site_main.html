@@ -45,28 +45,34 @@
 
             </div>
 
-            <div class='col-auto'>
+            <div class='col-auto align-self-center'>
                 <br>
                 <br>
-                <span class="welcome-message-green"
-                      style="margin-top:13px"> "  हाम्रो डिलासैनी, राम्रो डिलासैनी " </span><br>
+                <span class="welcome-message-green "
+                > "  हाम्रो डिलासैनी, राम्रो डिलासैनी " </span><br>
             </div>
 
 
-            <div class="col-auto">
-                <span class="welcome-info-samparka">सम्पर्क: </span><br>
-                <span class="welcome-info">फोन नम्बर : {{ organization_detail.phone }} </span><br>
-                <span class="welcome-info">ईमेल : {{ organization_detail.email }} </span><br>
-                <span class="welcome-info">वेबसाईट  : {{ organization_detail.website }}</span>
+            <div class="col-auto align-self-center">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="welcome-info-samparka">सम्पर्क:</div>
+                        <div class="welcome-info">फोन नम्बर : {{ organization_detail.phone }} </div>
+                        <div class="welcome-info">ईमेल : {{ organization_detail.email }} </div>
+                        <div class="welcome-info">वेबसाईट : {{ organization_detail.website }}</div>
+                    </div>
+
+                    <div class="col-auto">
+                        <img src={% static 'img/WavingFlag.gif' %} alt="logo" class="img-responsive" height="100px"
+                             width="100px">
+                    </div>
+                </div>
             </div>
 
-            <div class="col-auto">
-                <img src={% static 'img/WavingFlag.gif' %} alt="logo" class="img-responsive" height="100px"
-                     width="100px">
-            </div>
-        </div>
+
         </div>
     </div>
+</div>
 
 
 <!-- small heading and marquee -->
@@ -301,13 +307,13 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="manage_para">
-                                <p>जेष्ठ नगरिक : </p>
-                                <p>दलित जेष्ठ नगरिक : </p>
-                                <p>बिधुवा महिला : </p>
-                                <p>एकल महिला : </p>
-                                <p>अपाङ्ग : </p>
-                                <p>दलित बलबालिका : </p>
-                                <p>जम्मा : </p>
+                                <p>जेष्ठ नगरिक : {{ gaupalika_info.jesthaNagarik }}</p>
+                                <p>दलित जेष्ठ नगरिक : {{ gaupalika_info.dalit }}</p>
+                                <p>बिधुवा महिला : {{ gaupalika_info.bidhuwa }}</p>
+                                <p>एकल महिला : {{ gaupalika_info.aakal_mahila }}</p>
+                                <p>अपाङ्ग : {{ gaupalika_info.aapanga }}</p>
+                                <p>दलित बलबालिका : {{ gaupalika_info.balbalika }}</p>
+                                <p>जम्मा : {{ gaupalika_info.jamma }}</p>
                             </div>
                         </div>
                     </div>
