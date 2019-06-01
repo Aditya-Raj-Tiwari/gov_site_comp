@@ -1,7 +1,7 @@
 body{
   background: #E4E4E0;
   /*IF YOU REALLY WANT TO FORCE THE ISSUE*/
-
+  font-family: 'Halant', serif;
 }
 
 
@@ -55,4 +55,7 @@ color:green;
 
 .manage_para{
   font-size: 0.9em;
+}
+ .carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
 }

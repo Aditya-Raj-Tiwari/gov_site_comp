@@ -1,0 +1,7 @@
+[
+  {
+    "model": "gov_site_app.OrganizationDetail",
+    "pk": 1,
+    "fields":{"phone": "०१४४५६७८८", "email": "abcd@gmail.com", "website": "www.goverment.com"}
+  }
+]
