@@ -1,61 +1,79 @@
-body{
-  background: #E4E4E0;
-  /*IF YOU REALLY WANT TO FORCE THE ISSUE*/
-  font-family: 'Halant', serif;
+body {
+    background: #E4E4E0;
+    /*IF YOU REALLY WANT TO FORCE THE ISSUE*/
+    font-family: 'Halant', serif;
+    max-width:  1920px;
+    max-height: 1280px;
 }
 
 
 
-.heading_top{
-  background-color: #E4E4E0;
-  color: blue;
-}
-.welcome-message-red{
-  color: red;
-  font-size: 1.3em;
-}
-.welcome-message{
-  font-size: 1.3em;
+.heading_top {
+    background-color: #E4E4E0;
+    color: blue;
 }
 
-.welcome-message-green{
-color:green;
-  font-size: 1.3em;
-}
-.welcome-info{
-  font-size: 0.9em;
-}
-.contact-info-div{
-  padding-right: 40px;
-  padding-top: 10px;
-
-}
-.any_headline_span{
-  text-decoration: underline;
-}
-.span_ghatana_tatha_samachar{
-
-}
-.samachar_div{
-  color: white;
-  background-color: #3a79d1;
+.welcome-message-red {
+    color: red;
+    font-size: 1.3em;
 }
 
-.for_jumbotron{
-  height: 100%;
-  color: black;
+.welcome-message {
+    font-size: 1.3em;
 }
-.suchana_div{
-  border: 2px solid black;
-  border-top: 0px;
-  border-left: 0px;
-  background: #434259;
+
+.welcome-message-green {
+    color: green;
+    font-size: 1.3em;
+}
+
+.welcome-info {
+    font-size: 0.9em;
+}
+
+.contact-info-div {
+    padding-right: 40px;
+    padding-top: 10px;
 
 }
 
-.manage_para{
-  font-size: 0.9em;
+.any_headline_span {
+    text-decoration: underline;
 }
- .carousel-caption {
-  background: rgba(0, 0, 0, 0.5);
+
+.span_ghatana_tatha_samachar {}
+
+.samachar_div {
+    color: white;
+    background-color: #3a79d1;
 }
+
+.for_jumbotron {
+    height: 100%;
+    color: black;
+}
+
+.suchana_div {
+    border: 2px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    background: #434259;
+
+}
+
+.manage_para {
+    font-size: 0.9em;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.sewa_div {
+    height: 54vh;
+}
+
+.photogal_div{
+    max-height: 300px;
+    max-width: 100%;
+  }
