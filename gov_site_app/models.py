@@ -5,16 +5,16 @@ from django.db import models
 
 class SuchanaItems(models.Model):
     Suchana1_heading = models.CharField(max_length=32, default="Title")
-    Suchana1_suchana_photo_name = models.CharField(max_length=32,default="Title")
-    Suchana1_suchana_photo_description = models.TextField(max_length=200,default="Title")
+    Suchana1_suchana_photo_name = models.CharField(max_length=32,null=True, blank=True,default="Title")
+    Suchana1_suchana_photo_description = models.TextField(max_length=200,null=True, blank=True,default="Title")
     Suchana1_suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True,default="Title")
     Suchana2_heading = models.CharField(max_length=32, default="Title")
-    Suchana2_suchana_photo_name = models.CharField(max_length=32,default="Title")
-    Suchana2_suchana_photo_description = models.TextField(max_length=200,default="Title")
+    Suchana2_suchana_photo_name = models.CharField(max_length=32,null=True, blank=True,default="Title")
+    Suchana2_suchana_photo_description = models.TextField(max_length=200,null=True, blank=True,default="Title")
     Suchana2_suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True)
-    Suchana3_heading = models.CharField(max_length=32, default="Title")
-    Suchana3_suchana_photo_name = models.CharField(max_length=32, default="Title")
-    Suchana3_suchana_photo_description = models.TextField(max_length=200, default="Title")
+    Suchana3_heading = models.CharField(max_length=32,null=True, blank=True, default="Title")
+    Suchana3_suchana_photo_name = models.CharField(max_length=32,null=True, blank=True, default="Title")
+    Suchana3_suchana_photo_description = models.TextField(max_length=200,null=True, blank=True, default="Title")
     Suchana3_suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True)
 
 

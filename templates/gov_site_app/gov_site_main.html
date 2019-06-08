@@ -302,8 +302,9 @@
                 <div class="suchana_wrap_div">
                     <h5 id='sewaharu_id'>सुचना:</h5>
                     {% for itemss in suchana_items %}
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="15000">
                         <div class="carousel-inner">
+                            {% if itemss.Suchana1_heading %}
                             <div class="carousel-item active">
                                 <!-- for images -->
                                 <h3>{{ itemss.Suchana1_heading }}</h3>
@@ -311,28 +312,32 @@
                                 <img src='{{ itemss.Suchana1_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
                                 <br><br><br><br>
                                 {% endif %}
-                                <div class="col-auto">
+                                <div class="col-auto suchana_para">
                                     <p>{{ itemss.Suchana1_suchana_photo_description }}</p>
                                 </div>
+                                {% endif %}
                                 <br><br><br><br><br><br><br><br>
                             </div>
+                            {% if itemss.Suchana2_heading %}
                             <div class="carousel-item">
                                 <h3>{{ itemss.Suchana2_heading }}</h3>
                                 {% if itemss.Suchana2_suchana_photo %}
                                 <img src='{{ itemss.Suchana2_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
                                 <br><br><br><br>
                                 {% endif %}
-                                <div class="col-auto">
+                                <div class="col-auto suchana_para">
                                     <p>{{ itemss.Suchana2_suchana_photo_description }}</p>
                                 </div>
                                 <br><br><br><br><br><br><br><br>
+                                {% endif %}
                             </div>
+                            {% if itemss.Suchana3_heading %}
                             <div class="carousel-item">
                                 <h3>{{ itemss.Suchana3_heading }}</h3>
                                 {% if itemss.Suchana3_suchana_photo %}
                                 <img src='{{ itemss.Suchana1_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
-                                {% else %}
-                                <div class="col-auto">
+                                {% endif %}
+                                <div class="col-auto suchana_para">
                                     <p>{{ itemss.Suchana3_suchana_photo_description }}</p>
                                 </div>
                                 <br><br><br><br><br><br><br><br>
@@ -351,98 +356,98 @@
                     {% endfor %}
                     <!-- for descriptions -->
                 </div>
-            </div>
-            <!-- for 2 small box at the end -->
-            <div class="col-lg-3 general_info_height">
-                <div class="jana_pratinidhi general_info_height">
-                    <!-- for foto walla card -->
-                    <h5 style="color: white; background: rgb(58, 121, 209); margin-bottom: 0px; padding-left: 20px; padding-top: 5px;margin-top:13px">
-                        जन प्रतीनइध</h5>
-                    <div class="bd-example ">
-                        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                            <!--div cards of info janapratinidhi -->
-                            <div class="carousel-inner janapratinidhi_div">
-                                <div class="carousel-item active">
-                                    <div class="card mb-3" style="max-width: 540px; max-height: 54vh">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-4">
-                                                <img src={% static 'img/ukendra_photo1.jfif' %} alt="..." height="150px" width="100%">
+                <!-- for 2 small box at the end -->
+                <div class="col-lg-3 general_info_height">
+                    <div class="jana_pratinidhi general_info_height">
+                        <!-- for foto walla card -->
+                        <h5 style="color: white; background: rgb(58, 121, 209); margin-bottom: 0px; padding-left: 20px; padding-top: 5px;margin-top:13px">
+                            जन प्रतीनइध</h5>
+                        <div class="bd-example ">
+                            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                <!--div cards of info janapratinidhi -->
+                                <div class="carousel-inner janapratinidhi_div">
+                                    <div class="carousel-item active">
+                                        <div class="card mb-3" style="max-width: 540px; max-height: 54vh">
+                                            <div class="row no-gutters">
+                                                <div class="col-md-4">
+                                                    <img src={% static 'img/ukendra_photo1.jfif' %} alt="..." height="150px" width="100%">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">उकेन्द्र बहादुर बोहरा</h4>
+                                                        <p class="card-text">अध्यक्ष</p>
+                                                        <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-md-8">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">उकेन्द्र बहादुर बोहरा</h4>
-                                                    <p class="card-text">अध्यक्ष</p>
-                                                    <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
+                                        </div>
+                                        <div class="card mb-3" style="max-width: 540px;">
+                                            <div class="row no-gutters">
+                                                <div class="col-md-4">
+                                                    <img src={% static 'img/parwaati_photo2.JPG' %} alt="..." height="150px" width="100%">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">पार्वती कुमारी भण्डारी (राना)</h6>
+                                                        <p class="card-text">उपाध्यक्ष</p>
+                                                        <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card mb-3" style="max-width: 540px;">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-4">
-                                                <img src={% static 'img/parwaati_photo2.JPG' %} alt="..." height="150px" width="100%">
+                                    <div class="carousel-item">
+                                        <div class="card mb-3" style="max-width: 540px;">
+                                            <div class="row no-gutters">
+                                                <div class="col-md-4">
+                                                    <img src={% static 'img/chandradev_photo3.JPG' %} alt="..." height="150px" width="100%">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">चन्द्रदेव जोशी</h4>
+                                                        <p class="card-text">प्रमुख प्रशासकीय अधिकृत</p>
+                                                        <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-md-8">
-                                                <div class="card-body">
-                                                    <h6 class="card-title">पार्वती कुमारी भण्डारी (राना)</h6>
-                                                    <p class="card-text">उपाध्यक्ष</p>
-                                                    <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
+                                        </div>
+                                        <div class="card mb-3" style="max-width: 540px;">
+                                            <div class="row no-gutters">
+                                                <div class="col-md-4">
+                                                    <img src={% static 'img/navin_photo4.JFIF' %} alt="..." height="150px" width="100%">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">नबिन बहादुर राना</h4>
+                                                        <p class="card-text">सूचना तथा संचार प्रविधि अधिकृत</p>
+                                                        <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <div class="card mb-3" style="max-width: 540px;">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-4">
-                                                <img src={% static 'img/chandradev_photo3.JPG' %} alt="..." height="150px" width="100%">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">चन्द्रदेव जोशी</h4>
-                                                    <p class="card-text">प्रमुख प्रशासकीय अधिकृत</p>
-                                                    <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-3" style="max-width: 540px;">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-4">
-                                                <img src={% static 'img/navin_photo4.JFIF' %} alt="..." height="150px" width="100%">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">नबिन बहादुर राना</h4>
-                                                    <p class="card-text">सूचना तथा संचार प्रविधि अधिकृत</p>
-                                                    <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                        <h5>गाउँपलिका बारे </h5>
-                        <div class="card general_info_height">
-                            <div class="card-body">
-                                <div class="manage_para">
-                                    <p>जेष्ठ नगरिक : {{ gaupalika_info.jesthaNagarik }}</p>
-                                    <p>दलित जेष्ठ नगरिक : {{ gaupalika_info.dalit }}</p>
-                                    <p>बिधुवा महिला : {{ gaupalika_info.bidhuwa }}</p>
-                                    <p>एकल महिला : {{ gaupalika_info.aakal_mahila }}</p>
-                                    <p>अपाङ्ग : {{ gaupalika_info.aapanga }}</p>
-                                    <p>दलित बलबालिका : {{ gaupalika_info.balbalika }}</p>
-                                    <p>जम्मा : {{ gaupalika_info.jamma }}</p>
+                            <h5>गाउँपलिका बारे </h5>
+                            <div class="card general_info_height">
+                                <div class="card-body">
+                                    <div class="manage_para">
+                                        <p>जेष्ठ नगरिक : {{ gaupalika_info.jesthaNagarik }}</p>
+                                        <p>दलित जेष्ठ नगरिक : {{ gaupalika_info.dalit }}</p>
+                                        <p>बिधुवा महिला : {{ gaupalika_info.bidhuwa }}</p>
+                                        <p>एकल महिला : {{ gaupalika_info.aakal_mahila }}</p>
+                                        <p>अपाङ्ग : {{ gaupalika_info.aapanga }}</p>
+                                        <p>दलित बलबालिका : {{ gaupalika_info.balbalika }}</p>
+                                        <p>जम्मा : {{ gaupalika_info.jamma }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -450,7 +455,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
     </div>
     </div>
