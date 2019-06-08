@@ -4,10 +4,18 @@ from django.db import models
 # Create your models here.
 
 class SuchanaItems(models.Model):
-    heading = models.CharField(max_length=32, default="Title")
-    suchana_photo_name = models.CharField(max_length=32)
-    suchana_photo_description = models.TextField(max_length=200)
-    suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True)
+    Suchana1_heading = models.CharField(max_length=32, default="Title")
+    Suchana1_suchana_photo_name = models.CharField(max_length=32,default="Title")
+    Suchana1_suchana_photo_description = models.TextField(max_length=200,default="Title")
+    Suchana1_suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True,default="Title")
+    Suchana2_heading = models.CharField(max_length=32, default="Title")
+    Suchana2_suchana_photo_name = models.CharField(max_length=32,default="Title")
+    Suchana2_suchana_photo_description = models.TextField(max_length=200,default="Title")
+    Suchana2_suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True)
+    Suchana3_heading = models.CharField(max_length=32, default="Title")
+    Suchana3_suchana_photo_name = models.CharField(max_length=32, default="Title")
+    Suchana3_suchana_photo_description = models.TextField(max_length=200, default="Title")
+    Suchana3_suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True)
 
 
 class PhotoGallery(models.Model):
@@ -33,7 +41,6 @@ class OrganizationDetail(models.Model):
     website = models.TextField(max_length=100)
 
 
-
 class GaupalikaBare(models.Model):
     jesthaNagarik = models.TextField(max_length=20)
     dalit = models.TextField(max_length=100)
@@ -44,4 +51,3 @@ class GaupalikaBare(models.Model):
     balbalika = models.TextField(max_length=100)
     balbalika = models.TextField(max_length=100)
     jamma = models.TextField(max_length=100)
-

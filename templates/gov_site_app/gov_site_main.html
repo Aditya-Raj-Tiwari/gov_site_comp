@@ -179,7 +179,7 @@
                     <div class="carousel-inner photogal_div">
                         {% if items.image1 %}
                         <div class="carousel-item">
-                            <img src='{{ items.image1.url }}' alt="..." onkeypress="" class="d-block w-100" onkeypress="">
+                            <img src='{{ items.image1.url }}' alt="..." onkeypress="" class="d-block w-100" onkeypress="" height="320px">
                             <div class="carousel-caption d-none d-md-block">
                                 <p>{{ items.descriptionOfImage1 }}</p>
                             </div>
@@ -187,7 +187,7 @@
                         </div>
                         {% if items.image2 %}
                         <div class="carousel-item active">
-                            <img src='{{ items.image2.url }}' class="d-block w-100" alt="..." onkeypress="">
+                            <img src='{{ items.image2.url }}' class="d-block w-100" alt="..." onkeypress="" height="320px">
                             <div class="carousel-caption d-none d-md-block">
                                 <p>{{ items.descriptionOfImage2 }}</p>
                             </div>
@@ -195,7 +195,7 @@
                         </div>
                         {% if items.image3 %}
                         <div class="carousel-item">
-                            <img src='{{ items.image3.url }}' class="d-block w-100" alt="..." onkeypress="">
+                            <img src='{{ items.image3.url }}' class="d-block w-100" alt="..." onkeypress="" height="320px">
                             <div class="carousel-caption d-none d-md-block">
                                 <p>{{ items.descriptionOfImage3 }}</p>
                             </div>
@@ -203,7 +203,7 @@
                         </div>
                         {% if items.image4 %}
                         <div class="carousel-item">
-                            <img src='{{ items.image4.url }}' class="d-block w-100" alt="..." onkeypress="">
+                            <img src='{{ items.image4.url }}' class="d-block w-100" alt="..." onkeypress="" height="320px">
                             <div class="carousel-caption d-none d-md-block">
                                 <p>{{ items.descriptionOfImage4 }}</p>
                             </div>
@@ -211,7 +211,7 @@
                         {% endif %}
                         {% if items.image5 %}
                         <div class="carousel-item">
-                            <img src='{{ items.image5.url }}' class="d-block w-100" alt="..." h onkeypress="">
+                            <img src='{{ items.image5.url }}' class="d-block w-100" alt="..." h onkeypress="" height="320px">
                             <div class="carousel-caption d-none d-md-block">
                                 <p>{{ items.descriptionOfImage5 }}</p>
                             </div>
@@ -233,37 +233,76 @@
             <div class="col-lg-4">
                 <div class="suchana_wrap_div">
                     <h5 id='sewaharu_id'>सुचना:</h5>
-                    <!-- for images -->
                     {% for itemss in suchana_items %}
-                    <h3>{{ itemss.heading }}</h3>
-                    {% if itemss.suchana_photo %}
-                    <img src='{{ itemss.suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
-                    {% else %}
-                    <div class="col-auto">
-                        <p>{{ itemss.suchana_photo_description }}</p>
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <!-- for images -->
+                                <h3>{{ itemss.Suchana1_heading }}</h3>
+                                {% if itemss.Suchana1_suchana_photo %}
+                                <img src='{{ itemss.Suchana1_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
+                              
+                                <br><br><br><br>
+                                 {% endif %}
+                                 
+                                <div class="col-auto">
+                                    <p>{{ itemss.Suchana1_suchana_photo_description }}</p>
+                                </div>
+                                <br><br><br><br><br><br><br><br>
+                               
+                            </div>
+                            <div class="carousel-item">
+                                <h3>{{ itemss.Suchana2_heading }}</h3>
+                                {% if itemss.Suchana2_suchana_photo %}
+                                <img src='{{ itemss.Suchana2_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
+                                
+                                <br><br><br><br>
+                                {% endif %}
+                                
+                                <div class="col-auto">
+                                    <p>{{ itemss.Suchana2_suchana_photo_description }}</p>
+                                </div>
+                                <br><br><br><br><br><br><br><br>
+                                
+                             </div>
+                            <div class="carousel-item">
+                                <h3>{{ itemss.Suchana3_heading }}</h3>
+                                {% if itemss.Suchana3_suchana_photo %}
+                                <img src='{{ itemss.Suchana1_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
+                                {% else %}
+                                <div class="col-auto">
+                                    <p>{{ itemss.Suchana3_suchana_photo_description }}</p>
+                                </div>
+                                <br><br><br><br><br><br><br><br>
+                                {% endif %}
+                            </div> 
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <br><br><br><br><br><br><br><br>
-                    {% endif %}
                     {% endfor %}
                     <!-- for descriptions -->
                 </div>
             </div>
             <!-- for 2 small box at the end -->
-            <div class="col-lg-3">
-                <div class="jana_pratinidhi">
+            <div class="col-lg-3 general_info_height">
+                <div class="jana_pratinidhi general_info_height">
                     <!-- for foto walla card -->
                     <h5 style="color: white; background: rgb(58, 121, 209); margin-bottom: 0px; padding-left: 20px; padding-top: 5px;margin-top:13px">
                         जन प्रतीनइध</h5>
-                    <div class="bd-example">
+                    <div class="bd-example ">
                         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                            </ol>
+                            <!--div cards of info janapratinidhi -->
                             <div class="carousel-inner janapratinidhi_div">
                                 <div class="carousel-item active">
-                                    <div class="card mb-3" style="max-width: 540px;">
+                                    <br>
+                                    <div class="card mb-3" style="max-width: 540px; max-height: 54vh">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">
                                                 <img src={% static 'img/ukendra_photo1.jfif' %} alt="..." height="150px" width="100%">
@@ -284,7 +323,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="card-body">
-                                                    <h4 class="card-title">पार्वती कुमारी भण्डारी (राना)</h4>
+                                                    <h6 class="card-title">पार्वती कुमारी भण्डारी (राना)</h6>
                                                     <p class="card-text">उपाध्यक्ष</p>
                                                     <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
                                                 </div>
@@ -292,6 +331,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <br>
                                 <div class="carousel-item">
                                     <div class="card mb-3" style="max-width: 540px;">
                                         <div class="row no-gutters">
@@ -333,7 +373,7 @@
                             </a>
                         </div>
                         <h5>गाउँपलिका बारे </h5>
-                        <div class="card">
+                        <div class="card general_info_height">
                             <div class="card-body">
                                 <div class="manage_para">
                                     <p>जेष्ठ नगरिक : {{ gaupalika_info.jesthaNagarik }}</p>

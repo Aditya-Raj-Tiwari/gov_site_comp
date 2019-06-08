@@ -2,7 +2,7 @@ body {
     background: #E4E4E0;
     /*IF YOU REALLY WANT TO FORCE THE ISSUE*/
     font-family: 'Halant', serif;
-    max-width:  1920px;
+    max-width: 1920px;
     max-height: 1280px;
 }
 
@@ -73,12 +73,18 @@ body {
     height: 54vh;
 }
 
-.photogal_div{
-    max-height: 300px;
+.photogal_div {
+    max-height: 330px;
     max-width: 100%;
-  }
+}
 
-.janapratinidhi_div{
+.janapratinidhi_div {
     max-width: 100%;
-    max-height: 340px;
-}  
+    height: 54vh;
+}
+
+.general_info_height {
+    max-height: 300px;
+    `
+}
+
