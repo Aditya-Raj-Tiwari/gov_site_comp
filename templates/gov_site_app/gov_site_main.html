@@ -71,11 +71,9 @@
             </div>
             <div class="col-sm-9">
                 <marquee scrollamount="4" onmouseover="this.stop()" onmouseout="this.start()" style="text-decoration:underline">
-                  
-                            {% for headlines in headline %}
-                           <span style="margin-right: 300px"> {{ headlines.headline_topic }} </span>
-
-                            {% endfor %}
+                    {% for headlines in headline %}
+                    <span style="margin-right: 300px"> {{ headlines.headline_topic }} </span>
+                    {% endfor %}
                 </marquee>
             </div>
         </div>
@@ -359,12 +357,14 @@
                     <!-- for descriptions -->
                 </div>
                 <!-- for 2 small box at the end -->
+
                 <div class="col-lg-3 general_info_height">
                     <div class="jana_pratinidhi general_info_height">
                         <!-- for foto walla card -->
                         <h5 style="color: white; background: rgb(58, 121, 209); margin-bottom: 0px; padding-left: 20px; padding-top: 5px;margin-top:13px">
                             जन प्रतीनइध</h5>
                         <div class="bd-example ">
+                            {% for items in janapratinidhi_info %}
                             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                                 <!--div cards of info janapratinidhi -->
                                 <div class="carousel-inner janapratinidhi_div">
@@ -372,13 +372,13 @@
                                         <div class="card mb-3" style="max-width: 540px; max-height: 54vh">
                                             <div class="row no-gutters">
                                                 <div class="col-md-4" style="padding-top: 2px">
-                                                    <img src={% static 'img/ukendra_photo1.jfif' %} alt="..." height="170px" width="100%">
+                                                    <img src='{{ items.aadxya_photo.url }}' alt="..." height="170px" width="100%">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
-                                                        <h4 class="card-title display-5">उकेन्द्र बहादुर बोहरा</h4>
+                                                        <h4 class="card-title display-5">{{ items.aadxya_name }}</h4>
                                                         <p class="card-text">अध्यक्ष</p>
-                                                        <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
+                                                        <p class="card-text"><small class="text-muted">{{ items.aadxya_phonenumber }}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -386,13 +386,13 @@
                                         <div class="card mb-3" style="max-width: 540px;">
                                             <div class="row no-gutters">
                                                 <div class="col-md-4">
-                                                    <img src={% static 'img/parwaati_photo2.JPG' %} alt="..." height="170px" width="100%">
+                                                    <img src='{{  items.upadaxya_photo.url }}' alt="..." height="170px" width="100%">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">पार्वती कुमारी भण्डारी (राना)</h4>
+                                                        <h4 class="card-title">{{ items.upadaxya_name }}</h4>
                                                         <p class="card-text">उपाध्यक्ष</p>
-                                                        <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
+                                                        <p class="card-text"><small class="text-muted">{{ items.upadaxya_phonenumber }}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -402,13 +402,13 @@
                                         <div class="card mb-3" style="max-width: 540px;">
                                             <div class="row no-gutters">
                                                 <div class="col-md-4">
-                                                    <img src={% static 'img/chandradev_photo3.JPG' %} alt="..." height="150px" width="100%">
+                                                    <img src='{{ items.pramukh_prasasakya_photo.url }}' alt="..." height="150px" width="100%">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">चन्द्रदेव जोशी</h4>
+                                                        <h4 class="card-title">{{ items.pramukh_prasasakya_name }}</h4>
                                                         <p class="card-text">प्रमुख प्रशासकीय अधिकृत</p>
-                                                        <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
+                                                        <p class="card-text"><small class="text-muted">{{ items.pramukh_prasasakya_phonenumber }}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -416,18 +416,19 @@
                                         <div class="card mb-3" style="max-width: 540px;">
                                             <div class="row no-gutters">
                                                 <div class="col-md-4">
-                                                    <img src={% static 'img/navin_photo4.JFIF' %} alt="..." height="169px" width="100%">
+                                                    <img src='{{  items.suchana_tatha_sanchar_pratinidhi_photo.url }}' alt="..." height="169px" width="100%">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">नबिन बहादुर राना</h4>
+                                                        <h4 class="card-title">{{ items.suchana_tatha_sanchar_pratinidhi_name }}</h4>
                                                         <p class="card-text">सूचना तथा संचार प्रविधि अधिकृत</p>
-                                                        <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
+                                                        <p class="card-text"><small class="text-muted">{{ items.suchana_tatha_sanchar_pratinidhi_phonenumber }}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    {% endfor %}
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

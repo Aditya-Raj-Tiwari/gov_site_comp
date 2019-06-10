@@ -5,16 +5,16 @@ from django.db import models
 
 class SuchanaItems(models.Model):
     Suchana1_heading = models.CharField(max_length=32, default="Title")
-    Suchana1_suchana_photo_name = models.CharField(max_length=32,null=True, blank=True,default="Title")
-    Suchana1_suchana_photo_description = models.TextField(max_length=200,null=True, blank=True,default="Title")
-    Suchana1_suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True,default="Title")
+    Suchana1_suchana_photo_name = models.CharField(max_length=32, null=True, blank=True, default="Title")
+    Suchana1_suchana_photo_description = models.TextField(max_length=200, null=True, blank=True, default="Title")
+    Suchana1_suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True, default="Title")
     Suchana2_heading = models.CharField(max_length=32, default="Title")
-    Suchana2_suchana_photo_name = models.CharField(max_length=32,null=True, blank=True,default="Title")
-    Suchana2_suchana_photo_description = models.TextField(max_length=200,null=True, blank=True,default="Title")
+    Suchana2_suchana_photo_name = models.CharField(max_length=32, null=True, blank=True, default="Title")
+    Suchana2_suchana_photo_description = models.TextField(max_length=200, null=True, blank=True, default="Title")
     Suchana2_suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True)
-    Suchana3_heading = models.CharField(max_length=32,null=True, blank=True, default="Title")
-    Suchana3_suchana_photo_name = models.CharField(max_length=32,null=True, blank=True, default="Title")
-    Suchana3_suchana_photo_description = models.TextField(max_length=200,null=True, blank=True, default="Title")
+    Suchana3_heading = models.CharField(max_length=32, null=True, blank=True, default="Title")
+    Suchana3_suchana_photo_name = models.CharField(max_length=32, null=True, blank=True, default="Title")
+    Suchana3_suchana_photo_description = models.TextField(max_length=200, null=True, blank=True, default="Title")
     Suchana3_suchana_photo = models.ImageField(upload_to='suchana', null=True, blank=True)
 
 
@@ -35,7 +35,6 @@ class Headline(models.Model):
     headline_topic = models.TextField(max_length=2000)
 
 
-
 class OrganizationDetail(models.Model):
     phone = models.TextField(max_length=20)
     email = models.TextField(max_length=100)
@@ -52,3 +51,19 @@ class GaupalikaBare(models.Model):
     balbalika = models.TextField(max_length=100)
     balbalika = models.TextField(max_length=100)
     jamma = models.TextField(max_length=100)
+
+
+class Janapratinidhi(models.Model):
+    aadxya_name = models.CharField(max_length=322, default="Title")
+    aadxya_phonenumber = models.TextField(max_length=200, null=True, blank=True, default="Title")
+    aadxya_photo = models.ImageField(upload_to='images', null=True, blank=True)
+    upadaxya_name = models.CharField(max_length=322, default="Title")
+    upadaxya_phonenumber = models.TextField(max_length=200, null=True, blank=True, default="Title")
+    upadaxya_photo = models.ImageField(upload_to='images', null=True, blank=True)
+    pramukh_prasasakya_name = models.CharField(max_length=322, default="Title")
+    pramukh_prasasakya_phonenumber = models.TextField(max_length=200, null=True, blank=True, default="Title")
+    pramukh_prasasakya_photo = models.ImageField(upload_to='images', null=True, blank=True)
+    suchana_tatha_sanchar_pratinidhi_name = models.CharField(max_length=322, default="Title")
+    suchana_tatha_sanchar_pratinidhi_phonenumber = models.TextField(max_length=200, null=True, blank=True,
+                                                                  default="Title")
+    suchana_tatha_sanchar_pratinidhi_photo = models.ImageField(upload_to='images', null=True, blank=True)
