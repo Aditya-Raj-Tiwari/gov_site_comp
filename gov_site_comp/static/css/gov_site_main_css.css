@@ -1,7 +1,7 @@
 body {
     background: #E4E4E0;
     /*IF YOU REALLY WANT TO FORCE THE ISSUE*/
-    font-family: 'Halant', serif;
+    font-family: 'Yantramanav', sans-serif;
     max-width: 1920px;
     max-height: 1280px;
 }
@@ -44,6 +44,7 @@ body {
 .span_ghatana_tatha_samachar {}
 
 .samachar_div {
+    font-size: 1.3em;
     color: white;
     background-color: #3a79d1;
 }

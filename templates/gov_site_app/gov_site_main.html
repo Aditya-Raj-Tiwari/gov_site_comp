@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href={% static 'css/gov_site_main_css.css' %}>
-    <link href="https://fonts.googleapis.com/css?family=Halant&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -65,15 +65,17 @@
     <!-- small heading and marquee -->
     <div class="samachar_div">
         <div class="row">
-            <div class="col-sm-2" align="center">
+            <div class="col-sm-3" align="center">
                 <span class="span_ghatana_tatha_samachar">सुचना तथा समाचार</span>
                 <img style="margin-left:50px" src={% static 'img/arrow.PNG' %} alt='>' height="30px" width="35px">
             </div>
-            <div class="col-sm-10">
-                <marquee scrollamount="7" onmouseover="this.stop()" onmouseout="this.start()" style="text-decoration:underline">
-                    {% for headlines in headline %}
-                    {{ headlines.headline_topic }}
-                    {% endfor %}
+            <div class="col-sm-9">
+                <marquee scrollamount="4" onmouseover="this.stop()" onmouseout="this.start()" style="text-decoration:underline">
+                  
+                            {% for headlines in headline %}
+                           <span style="margin-right: 300px"> {{ headlines.headline_topic }} </span>
+
+                            {% endfor %}
                 </marquee>
             </div>
         </div>
@@ -369,12 +371,12 @@
                                     <div class="carousel-item active">
                                         <div class="card mb-3" style="max-width: 540px; max-height: 54vh">
                                             <div class="row no-gutters">
-                                                <div class="col-md-4">
-                                                    <img src={% static 'img/ukendra_photo1.jfif' %} alt="..." height="150px" width="100%">
+                                                <div class="col-md-4" style="padding-top: 2px">
+                                                    <img src={% static 'img/ukendra_photo1.jfif' %} alt="..." height="170px" width="100%">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">उकेन्द्र बहादुर बोहरा</h4>
+                                                        <h4 class="card-title display-5">उकेन्द्र बहादुर बोहरा</h4>
                                                         <p class="card-text">अध्यक्ष</p>
                                                         <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
                                                     </div>
@@ -384,11 +386,11 @@
                                         <div class="card mb-3" style="max-width: 540px;">
                                             <div class="row no-gutters">
                                                 <div class="col-md-4">
-                                                    <img src={% static 'img/parwaati_photo2.JPG' %} alt="..." height="150px" width="100%">
+                                                    <img src={% static 'img/parwaati_photo2.JPG' %} alt="..." height="170px" width="100%">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">
-                                                        <h6 class="card-title">पार्वती कुमारी भण्डारी (राना)</h6>
+                                                        <h4 class="card-title">पार्वती कुमारी भण्डारी (राना)</h4>
                                                         <p class="card-text">उपाध्यक्ष</p>
                                                         <p class="card-text"><small class="text-muted">Phno:9808565534</small></p>
                                                     </div>
@@ -414,7 +416,7 @@
                                         <div class="card mb-3" style="max-width: 540px;">
                                             <div class="row no-gutters">
                                                 <div class="col-md-4">
-                                                    <img src={% static 'img/navin_photo4.JFIF' %} alt="..." height="150px" width="100%">
+                                                    <img src={% static 'img/navin_photo4.JFIF' %} alt="..." height="169px" width="100%">
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="card-body">

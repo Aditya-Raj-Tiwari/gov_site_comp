@@ -35,6 +35,7 @@ class Headline(models.Model):
     headline_topic = models.TextField(max_length=2000)
 
 
+
 class OrganizationDetail(models.Model):
     phone = models.TextField(max_length=20)
     email = models.TextField(max_length=100)
