@@ -39,7 +39,7 @@ class OrganizationDetail(models.Model):
     phone = models.TextField(max_length=20)
     email = models.TextField(max_length=100)
     website = models.TextField(max_length=100)
-    wadaNumber = models.IntegerField(max_length=100)
+    wadaNumber = models.IntegerField()
 
 
 class GaupalikaBare(models.Model):
@@ -66,5 +66,5 @@ class Janapratinidhi(models.Model):
     pramukh_prasasakya_photo = models.ImageField(upload_to='images', null=True, blank=True)
     suchana_tatha_sanchar_pratinidhi_name = models.CharField(max_length=322, default="Title")
     suchana_tatha_sanchar_pratinidhi_phonenumber = models.TextField(max_length=200, null=True, blank=True,
-                                                                  default="Title")
+                                                                    default="Title")
     suchana_tatha_sanchar_pratinidhi_photo = models.ImageField(upload_to='images', null=True, blank=True)
