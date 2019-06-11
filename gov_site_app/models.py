@@ -39,6 +39,7 @@ class OrganizationDetail(models.Model):
     phone = models.TextField(max_length=20)
     email = models.TextField(max_length=100)
     website = models.TextField(max_length=100)
+    wadaNumber = models.IntegerField(max_length=100)
 
 
 class GaupalikaBare(models.Model):
