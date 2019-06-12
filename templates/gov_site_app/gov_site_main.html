@@ -64,6 +64,7 @@
         </div>
     </div>
     <!-- small heading and marquee -->
+    
     <div class="samachar_div">
         {% for suchana_itms in suchana_items %}
         <div class="row">
@@ -350,7 +351,7 @@
                             <div class="carousel-item">
                                 <h3>{{ suchana_itms.Suchana3_heading }}</h3>
                                 {% if suchana_itms.Suchana3_suchana_photo %}
-                                <img src='{{ suchana_itms.Suchana1_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
+                                <img src='{{ suchana_itms.Suchana3_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
                                 {% endif %}
                                 <div class="col-auto suchana_para">
                                     <p>{{ suchana_itms.Suchana3_suchana_photo_description }}</p>
@@ -358,6 +359,7 @@
                                 <br><br><br><br><br><br><br><br>
                                 {% endif %}
                             </div>
+                        </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
