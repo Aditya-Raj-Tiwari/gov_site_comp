@@ -48,8 +48,6 @@ class GaupalikaBare(models.Model):
     bidhuwa = models.TextField(max_length=100)
     aakal_mahila = models.TextField(max_length=100)
     aapanga = models.TextField(max_length=100)
-    dalit = models.TextField(max_length=100)
-    balbalika = models.TextField(max_length=100)
     balbalika = models.TextField(max_length=100)
     jamma = models.TextField(max_length=100)
 
