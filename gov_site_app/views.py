@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import datetime
 from django.http import HttpResponse
 from gov_site_app.models import SuchanaItems, PhotoGallery, Headline, OrganizationDetail, GaupalikaBare,Janapratinidhi
 
