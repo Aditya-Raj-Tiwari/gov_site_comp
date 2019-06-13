@@ -2,11 +2,13 @@ body {
     background: #E4E4E0;
     /*IF YOU REALLY WANT TO FORCE THE ISSUE*/
     font-family: 'Yantramanav', sans-serif;
-      max-width: 1920px;
+    max-width: 1920px;
     max-height: 1080px;
-    }
-
-
+}
+.body_div{
+    margin-left: 50px;
+    margin-right: 20px;
+}
 
 .heading_top {
     background-color: #E4E4E0;
@@ -41,9 +43,11 @@ body {
     text-decoration: underline;
 }
 
-.span_ghatana_tatha_samachar {}
+.span_ghatana_tatha_samachar {
+}
 
 .samachar_div {
+    margin-left: 20px;
     font-size: 1.3em;
     color: white;
     background-color: #3a79d1;
@@ -84,21 +88,25 @@ body {
     height: 330px;
 }
 
-.suchana_para{
+.suchana_para {
     background: #fff;
 }
-.second_element_thirdrow{
+
+.second_element_thirdrow {
     height: 80px;
 }
-.third_element_thirdrow{
+
+.third_element_thirdrow {
     margin-top: 30px;
-   height: 330px;
+    height: 330px;
 }
-.for_clock{
+
+.for_clock {
     height: 80px;
     width: 100%;
     background: #fff;
 }
+
 .clock {
     position: absolute;
     top: 50%;
@@ -108,3 +116,5 @@ body {
     font-size: 1.3em;
     font-family: Orbitron;
     letter-spacing: 7px;
+
+}

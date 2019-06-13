@@ -7,94 +7,98 @@
     <meta charset="utf-8">
     <title>Gov site</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href={% static 'css/gov_site_main_css.css' %}>
     <link href="https://fonts.googleapis.com/css?family=Yantramanav&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="d-flex justify-content-end">
-        <a class="col-auto" href="https://www.facebook.com/Dilasaini342">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a class="col-auto" href="https://twitter.com/drmbaitadi">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a class="col-auto" href="mailto:drmbaitadi@gmail.com">
-            <i class="fas fa-envelope"></i>
-        </a>
-    </div>
-    <!-- for heading  -->
-    <div class="heading_top ">
-        <div class="container-fluid">
-            <div class="row justify-content-between">
-                <div class="col-auto">
-                    <div class="row">
-                        <div class="col-auto">
-                            <img src={% static 'img/nepal-govt.PNG' %} alt="logo" height="90px" width="100px">
-                        </div>
-                        <div class="messages col-auto">
-                            <div class="welcome-message">डिलासैनी गाउँपालिका</div>
-                            <div class="welcome-message-red"> गाउँ कार्यपालिकाको कार्यालय</div>
-                            <div class="welcome-message-green">डिलासैनी, बैतडी</div>
-                            <div class="welcome-message-green"> सुदूरपश्चिम प्रदेश, नेपाल</div>
-                        </div>
-                    </div>
-                </div>
-                <div class='col-auto align-self-center'>
-                    <br>
-                    <br>
-                    <span class="welcome-message-green "> " हाम्रो डिलासैनी, राम्रो डिलासैनी " </span><br>
-                </div>
-                <div class="col-auto align-self-center">
-                    <div class="row">
-                        <div class="col-auto">
-                            <div class="welcome-info-samparka">सम्पर्क:</div>
-                            <div class="welcome-info">फोन नम्बर : {{ organization_detail.phone }} </div>
-                            <div class="welcome-info">ईमेल : {{ organization_detail.email }} </div>
-                            <div class="welcome-info">वेबसाईट : {{ organization_detail.website }}</div>
-                            <div class="welcome-info">ओदा नम्बर : {{ organization_detail.wadaNumber }}</div>
-                        </div>
-                        <div class="col-auto">
-                            <img src={% static 'img/WavingFlag.GIF' %} alt="logo" class="img-responsive" height="100px" width="100px">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- small heading and marquee -->
-    <div class="samachar_div">
-        {% for suchana_itms in suchana_items %}
-        <div class="row">
-            <div class="col-sm-3" align="center">
-                <span class="span_ghatana_tatha_samachar">सुचना तथा समाचार</span>
-                <img style="margin-left:50px" src={% static 'img/arrow.PNG' %} alt='>' height="30px" width="35px">
-            </div>
-            <div class="col-sm-9">
-                <marquee scrollamount="10" onmouseover="this.stop()" onmouseout="this.start()" style="text-decoration:underline">
-                    {% for headlines in headline %}
-                    <span style="margin-right: 300px;">
-                        <span style="margin-right: 300px; margin-left: 300px">{{ suchana_itms.Suchana1_heading }}</span>
-                        {% if suchana_itms.Suchana2_heading %}
-                        <span style="margin-right: 300px; margin-left: 300px">
-                            {{ suchana_itms.Suchana2_heading }}</span>
-                        {% endif %}
-                        {% if suchana_itms.Suchana3_heading %}
-                        <span style="margin-right: 300px; margin-left: 300px">
-                            {{ suchana_itms.Suchana3_heading }}</span>
-                        {% endif %}
-                    </span>
-                    <span style="margin-right: 300px"> {{ headlines.headline_topic }}
-                    </span>
-                    {% endfor %}
-                    {% endfor %}
-                </marquee>
-            </div>
-        </div>
-    </div>
+<div class="d-flex justify-content-end">
+    <a class="col-auto" href="https://www.facebook.com/Dilasaini342">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="col-auto" href="https://twitter.com/drmbaitadi">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a class="col-auto" href="mailto:drmbaitadi@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>
+<!-- for heading  -->
+<div class="heading_top ">
     <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-auto">
+                <div class="row">
+                    <div class="col-auto">
+                        <img src={% static 'img/nepal-govt.PNG' %} alt="logo" height="90px" width="100px">
+                    </div>
+                    <div class="messages col-auto">
+                        <div class="welcome-message">डिलासैनी गाउँपालिका</div>
+                        <div class="welcome-message-red"> गाउँ कार्यपालिकाको कार्यालय</div>
+                        <div class="welcome-message-green">डिलासैनी, बैतडी</div>
+                        <div class="welcome-message-green"> सुदूरपश्चिम प्रदेश, नेपाल</div>
+                    </div>
+                </div>
+            </div>
+            <div class='col-auto align-self-center'>
+                <br>
+                <br>
+                <span class="welcome-message-green "> " हाम्रो डिलासैनी, राम्रो डिलासैनी " </span><br>
+            </div>
+            <div class="col-auto align-self-center">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="welcome-info-samparka">सम्पर्क:</div>
+                        <div class="welcome-info">फोन नम्बर : {{ organization_detail.phone }} </div>
+                        <div class="welcome-info">ईमेल : {{ organization_detail.email }} </div>
+                        <div class="welcome-info">वेबसाईट : {{ organization_detail.website }}</div>
+                        <div class="welcome-info">ओदा नम्बर : {{ organization_detail.wadaNumber }}</div>
+                    </div>
+                    <div class="col-auto">
+                        <img src={% static 'img/WavingFlag.GIF' %} alt="logo" class="img-responsive" height="100px"
+                             width="100px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- small heading and marquee -->
+<div class="samachar_div">
+    {% for suchana_itms in suchana_items %}
+        <div class="row">
+        <div class="col-sm-3" align="center">
+            <span class="span_ghatana_tatha_samachar">सुचना तथा समाचार</span>
+            <img style="margin-left:50px" src={% static 'img/arrow.PNG' %} alt='>' height="30px" width="35px">
+        </div>
+        <div class="col-sm-9">
+        <marquee scrollamount="10" onmouseover="this.stop()" onmouseout="this.start()"
+                 style="text-decoration:underline">
+        {% for headlines in headline %}
+            <span style="margin-right: 300px;">
+                        <span style="margin-right: 300px; margin-left: 300px">{{ suchana_itms.Suchana1_heading }}</span>
+                {% if suchana_itms.Suchana2_heading %}
+                    <span style="margin-right: 300px; margin-left: 300px">
+                            {{ suchana_itms.Suchana2_heading }}</span>
+                {% endif %}
+                {% if suchana_itms.Suchana3_heading %}
+                    <span style="margin-right: 300px; margin-left: 300px">
+                            {{ suchana_itms.Suchana3_heading }}</span>
+                {% endif %}
+                    </span>
+            <span style="margin-right: 300px"> {{ headlines.headline_topic }}
+                    </span>
+        {% endfor %}
+    {% endfor %}
+    </marquee>
+    </div>
+    </div>
+</div>
+<div class="container-fluid"><div class="body_div">
+    
         <div class="row">
             <!-- for sewa and photo gallery -->
             <div class="col-lg-5">
@@ -105,139 +109,184 @@
                         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/1.1.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/1.1.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/1.2.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/1.2.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/1.3.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/1.3.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/1.4.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/1.4.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/1.5.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/1.5.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/1.6.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/1.6.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/1.7.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/1.7.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/1.8.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/1.8.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/1.9.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/1.9.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/1.10.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/1.10.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/2.1.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/2.1.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/2.2.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/2.2.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/2.3.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/2.3.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/2.4.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/2.4.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/2.5.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/2.5.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/2.6.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/2.6.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/2.7.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/2.7.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/2.8.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/2.8.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/2.9.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/2.9.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/2.10.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/2.10.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/3.1.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/3.1.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/3.2.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/3.2.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/3.3.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/3.3.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/3.4.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/3.4.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/3.5.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/3.5.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/3.6.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/3.6.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/3.7.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/3.7.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/3.8.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/3.8.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/3.9.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/3.9.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/3.10.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/3.10.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/4.1.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/4.1.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/4.2.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/4.2.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/4.3.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/4.3.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/4.4.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/4.4.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/4.5.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/4.5.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/4.6.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/4.6.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/4.7.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/4.7.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/4.8.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/4.8.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/4.9.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/4.9.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/4.10.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/4.10.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/5.1.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/5.1.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/5.2.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/5.2.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/5.3.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/5.3.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/5.4.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/5.4.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100 sewa_div" src={% static 'img/sewa_img/5.5.PNG' %} alt="Firstslide" style="height:400px">
+                                    <img class="d-block w-100 sewa_div"
+                                         src={% static 'img/sewa_img/5.5.PNG' %} alt="Firstslide" style="height:400px">
                                 </div>
                             </div>
                             <br>
@@ -247,73 +296,82 @@
                     <!-- for photo gallery with scrollling image only -->
                     <div class="container">
                         <div class="photogal_div">
-                            <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" data-interval="15000">
+                            <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel"
+                                 data-interval="15000">
                                 {% for items in photo_gallery_images %}
-                                <ol class="carousel-indicators">
-                                    {% if items.image1 %}
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                    {% endif %}
-                                    {% if items.image2 %}
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                    {% endif %}
-                                    {% if items.image3 %}
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                    {% endif %}
-                                    {% if items.image4 %}
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                                    {% endif %}
-                                    {% if items.image5 %}
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                                    {% endif %}
-                                </ol>
-                                <div class="carousel-inner">
-                                    {% if items.image1 %}
-                                    <div class="carousel-item">
-                                        <img src='{{ items.image1.url }}' alt="..." onkeypress="" class="d-block w-100" onkeypress="" height="400px">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <p>{{ items.descriptionOfImage1 }}</p>
+                                    <ol class="carousel-indicators">
+                                        {% if items.image1 %}
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="0"
+                                                class="active"></li>
+                                        {% endif %}
+                                        {% if items.image2 %}
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                        {% endif %}
+                                        {% if items.image3 %}
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        {% endif %}
+                                        {% if items.image4 %}
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                        {% endif %}
+                                        {% if items.image5 %}
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                        {% endif %}
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        {% if items.image1 %}
+                                            <div class="carousel-item">
+                                            <img src='{{ items.image1.url }}' alt="..." onkeypress="" class="d-block w-100"
+                                                 onkeypress="" height="400px">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p>{{ items.descriptionOfImage1 }}</p>
+                                            </div>
+                                        {% endif %}
                                         </div>
+                                        {% if items.image2 %}
+                                            <div class="carousel-item active">
+                                            <img src='{{ items.image2.url }}' class="d-block w-100" alt="..." onkeypress=""
+                                                 height="400px">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p>{{ items.descriptionOfImage2 }}</p>
+                                            </div>
+                                        {% endif %}
+                                        </div>
+                                        {% if items.image3 %}
+                                            <div class="carousel-item">
+                                            <img src='{{ items.image3.url }}' class="d-block w-100" alt="..." onkeypress=""
+                                                 height="400px">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <p>{{ items.descriptionOfImage3 }}</p>
+                                            </div>
+                                        {% endif %}
+                                        </div>
+                                        {% if items.image4 %}
+                                            <div class="carousel-item">
+                                                <img src='{{ items.image4.url }}' class="d-block w-100" alt="..."
+                                                     onkeypress="" height="400px">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <p>{{ items.descriptionOfImage4 }}</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if items.image5 %}
+                                            <div class="carousel-item">
+                                                <img src='{{ items.image5.url }}' class="d-block w-100" alt="..." h
+                                                     onkeypress="" height="400px">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <p>{{ items.descriptionOfImage5 }}</p>
+                                                </div>
+                                            </div>
                                         {% endif %}
                                     </div>
-                                    {% if items.image2 %}
-                                    <div class="carousel-item active">
-                                        <img src='{{ items.image2.url }}' class="d-block w-100" alt="..." onkeypress="" height="400px">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <p>{{ items.descriptionOfImage2 }}</p>
-                                        </div>
-                                        {% endif %}
-                                    </div>
-                                    {% if items.image3 %}
-                                    <div class="carousel-item">
-                                        <img src='{{ items.image3.url }}' class="d-block w-100" alt="..." onkeypress="" height="400px">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <p>{{ items.descriptionOfImage3 }}</p>
-                                        </div>
-                                        {% endif %}
-                                    </div>
-                                    {% if items.image4 %}
-                                    <div class="carousel-item">
-                                        <img src='{{ items.image4.url }}' class="d-block w-100" alt="..." onkeypress="" height="400px">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <p>{{ items.descriptionOfImage4 }}</p>
-                                        </div>
-                                    </div>
-                                    {% endif %}
-                                    {% if items.image5 %}
-                                    <div class="carousel-item">
-                                        <img src='{{ items.image5.url }}' class="d-block w-100" alt="..." h onkeypress="" height="400px">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <p>{{ items.descriptionOfImage5 }}</p>
-                                        </div>
-                                    </div>
-                                    {% endif %}
-                                </div>
                                 {% endfor %}
-                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                   data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                   data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
@@ -327,51 +385,54 @@
                 <div class="suchana_wrap_div">
                     <h5 id='sewaharu_id'>सुचना:</h5>
                     {% for suchana_itms in suchana_items %}
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="15000">
-                        <div class="carousel-inner">
-                            {% if suchana_itms.Suchana1_heading %}
-                            <div class="carousel-item active">
-                                <!-- for images -->
-                                <h3>{{ suchana_itms.Suchana1_heading }}</h3>
-                                {% if suchana_itms.Suchana1_suchana_photo %}
-                                <img src='{{ suchana_itms.Suchana1_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
-                                <br><br><br><br>
-                                {% endif %}
-                                <div class="col-auto suchana_para">
-                                    <p>{{ suchana_itms.Suchana1_suchana_photo_description }}</p>
-                                </div>
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="15000">
+                            <div class="carousel-inner">
+                                {% if suchana_itms.Suchana1_heading %}
+                                    <div class="carousel-item active">
+                                    <!-- for images -->
+                                    <h3>{{ suchana_itms.Suchana1_heading }}</h3>
+                                    {% if suchana_itms.Suchana1_suchana_photo %}
+                                        <img src='{{ suchana_itms.Suchana1_suchana_photo.url }}' class="d-block w-100"
+                                             alt="..." height="300px" onkeypress="" width="100%">
+                                        <br><br><br><br>
+                                    {% endif %}
+                                    <div class="col-auto suchana_para">
+                                        <p>{{ suchana_itms.Suchana1_suchana_photo_description }}</p>
+                                    </div>
                                 {% endif %}
                                 <br><br><br><br><br><br><br><br>
-                            </div>
-                            {% if suchana_itms.Suchana2_heading %}
-                            <div class="carousel-item">
-                                <h3>{{ suchana_itms.Suchana2_heading }}</h3>
-                                {% if suchana_itms.Suchana2_suchana_photo %}
-                                <img src='{{ suchana_itms.Suchana2_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
-                                <br><br><br><br>
-                                {% endif %}
-                                <div class="col-auto suchana_para">
-                                    <p>{{ suchana_itms.Suchana2_suchana_photo_description }}</p>
                                 </div>
-                                <br><br><br><br><br><br><br><br>
+                                {% if suchana_itms.Suchana2_heading %}
+                                    <div class="carousel-item">
+                                    <h3>{{ suchana_itms.Suchana2_heading }}</h3>
+                                    {% if suchana_itms.Suchana2_suchana_photo %}
+                                        <img src='{{ suchana_itms.Suchana2_suchana_photo.url }}' class="d-block w-100"
+                                             alt="..." height="300px" onkeypress="" width="100%">
+                                        <br><br><br><br>
+                                    {% endif %}
+                                    <div class="col-auto suchana_para">
+                                        <p>{{ suchana_itms.Suchana2_suchana_photo_description }}</p>
+                                    </div>
+                                    <br><br><br><br><br><br><br><br>
                                 {% endif %}
-                            </div>
-                            {% if suchana_itms.Suchana3_heading %}
-                            <div class="carousel-item">
-                                <h3>{{ suchana_itms.Suchana3_heading }}</h3>
-                                {% if suchana_itms.Suchana3_suchana_photo %}
-                                <img src='{{ suchana_itms.Suchana3_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
-                                {% endif %}
-                                <div class="col-auto suchana_para">
-                                    <p>{{ suchana_itms.Suchana3_suchana_photo_description }}</p>
                                 </div>
-                                <br><br><br><br><br><br><br><br>
+                                {% if suchana_itms.Suchana3_heading %}
+                                    <div class="carousel-item">
+                                    <h3>{{ suchana_itms.Suchana3_heading }}</h3>
+                                    {% if suchana_itms.Suchana3_suchana_photo %}
+                                        <img src='{{ suchana_itms.Suchana3_suchana_photo.url }}' class="d-block w-100"
+                                             alt="..." height="300px" onkeypress="" width="100%">
+                                    {% endif %}
+                                    <div class="col-auto suchana_para">
+                                        <p>{{ suchana_itms.Suchana3_suchana_photo_description }}</p>
+                                    </div>
+                                    <br><br><br><br><br><br><br><br>
                                 {% endif %}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                {% endfor %}
+                        </div>
+                    {% endfor %}
                 <!-- for descriptions -->
             </div>
             <!-- for 2 small box at the end -->
@@ -386,71 +447,88 @@
                                         जन प्रतीनइध</h5>
                                     <div class="bd-example ">
                                         {% for items in janapratinidhi_info %}
-                                        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                                             <!--div cards of info janapratinidhi -->
                                             <div class="carousel-inner janapratinidhi_div">
-                                                <div class="carousel-item active">
-                                                    <div class="card mb-3" style="max-width: 540px;">
-                                                        <div class="row no-gutters">
-                                                            <div class="col-md-4" style="margin-top: 7px">
-                                                                <img src='{{ items.aadxya_photo.url }}' alt="..." height="130px" width="100px">
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <div class="card-body">
-                                                                    <h4 class="card-title display-5" style="color:#ca3e47">{{ items.aadxya_name }}</h4>
-                                                                    <p class="card-text">अध्यक्ष</p>
-                                                                    <p class="card-text"><small class="text-muted">{{ items.aadxya_phonenumber }}</small></p>
-                                                                </div>
-                                                            </div>
+                                            <div class="carousel-item active">
+                                                <div class="card mb-3" style="max-width: 540px;">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-md-4" style="margin-top: 7px">
+                                                            <img src='{{ items.aadxya_photo.url }}' alt="..." height="130px"
+                                                                 width="100px">
                                                         </div>
-                                                    </div>
-                                                    <div class="card mb-3" style="max-width: 540px;">
-                                                        <div class="row no-gutters">
-                                                            <div class="col-md-4" style="margin-top: 7px">
-                                                                <img src='{{  items.upadaxya_photo.url }}' alt="..." height="130px" width="100px">
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <div class="card-body">
-                                                                    <h4 class="card-title" style="color:#ca3e47">{{ items.upadaxya_name }}</h4>
-                                                                    <p class="card-text">उपाध्यक्ष</p>
-                                                                    <p class="card-text"><small class="text-muted">{{ items.upadaxya_phonenumber }}</small></p>
-                                                                </div>
+                                                        <div class="col-md-8">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title display-5"
+                                                                    style="color:#ca3e47">{{ items.aadxya_name }}</h4>
+                                                                <p class="card-text">अध्यक्ष</p>
+                                                                <p class="card-text">
+                                                                    <small class="text-muted">{{ items.aadxya_phonenumber }}</small>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="carousel-item">
-                                                    <div class="card mb-3" style="max-width: 540px;">
-                                                        <div class="row no-gutters">
-                                                            <div class="col-md-4" style="margin-top: 7px">
-                                                                <img src='{{ items.pramukh_prasasakya_photo.url }}' alt="..." height="130px" width="100px">
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <div class="card-body">
-                                                                    <h4 class="card-title" style="color:#ca3e47">{{ items.pramukh_prasasakya_name }}</h4>
-                                                                    <p class="card-text">प्रमुख प्रशासकीय अधिकृत</p>
-                                                                    <p class="card-text"><small class="text-muted">{{ items.pramukh_prasasakya_phonenumber }}</small></p>
-                                                                </div>
-                                                            </div>
+                                                <div class="card mb-3" style="max-width: 540px;">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-md-4" style="margin-top: 7px">
+                                                            <img src='{{ items.upadaxya_photo.url }}' alt="..."
+                                                                 height="130px" width="100px">
                                                         </div>
-                                                    </div>
-                                                    <div class="card mb-3" style="max-width: 540px;">
-                                                        <div class="row no-gutters">
-                                                            <div class="col-md-4" style="margin-top: 7px">
-                                                                <img src='{{  items.suchana_tatha_sanchar_pratinidhi_photo.url }}' alt="..." height="134px" width="100px">
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <div class="card-body">
-                                                                    <h4 class="card-title" style="color:#ca3e47">{{ items.suchana_tatha_sanchar_pratinidhi_name }}</h4>
-                                                                    <p class="card-text" style="font-size: 0.8em">सूचना तथा संचार प्रविधि अधिकृत</p>
-                                                                    <p class="card-text"><small class="text-muted">{{ items.suchana_tatha_sanchar_pratinidhi_phonenumber }}</small></p>
-                                                                </div>
+                                                        <div class="col-md-8">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"
+                                                                    style="color:#ca3e47">{{ items.upadaxya_name }}</h4>
+                                                                <p class="card-text">उपाध्यक्ष</p>
+                                                                <p class="card-text">
+                                                                    <small class="text-muted">{{ items.upadaxya_phonenumber }}</small>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                {% endfor %}
                                             </div>
+                                            <div class="carousel-item">
+                                                <div class="card mb-3" style="max-width: 540px;">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-md-4" style="margin-top: 7px">
+                                                            <img src='{{ items.pramukh_prasasakya_photo.url }}' alt="..."
+                                                                 height="130px" width="100px">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"
+                                                                    style="color:#ca3e47">{{ items.pramukh_prasasakya_name }}</h4>
+                                                                <p class="card-text">प्रमुख प्रशासकीय अधिकृत</p>
+                                                                <p class="card-text">
+                                                                    <small class="text-muted">{{ items.pramukh_prasasakya_phonenumber }}</small>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card mb-3" style="max-width: 540px;">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-md-4" style="margin-top: 7px">
+                                                            <img src='{{ items.suchana_tatha_sanchar_pratinidhi_photo.url }}'
+                                                                 alt="..." height="134px" width="100px">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"
+                                                                    style="color:#ca3e47">{{ items.suchana_tatha_sanchar_pratinidhi_name }}</h4>
+                                                                <p class="card-text" style="font-size: 0.8em">सूचना तथा
+                                                                    संचार प्रविधि अधिकृत</p>
+                                                                <p class="card-text">
+                                                                    <small class="text-muted">{{ items.suchana_tatha_sanchar_pratinidhi_phonenumber }}</small>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -458,7 +536,7 @@
                             <div class="w-100"></div>
                             <div class="col">
                                 <div class="for_clock">
-                                   <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+                                    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
                                 </div>
                             </div>
                             <div class="w-100"></div>
@@ -483,19 +561,32 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <br>
-    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+</div>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 <script src={% static "js/gov_sute.js" %}></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 </html>

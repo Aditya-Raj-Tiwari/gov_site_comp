@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from gov_site_app.models import SuchanaItems, PhotoGallery, Headline, OrganizationDetail, GaupalikaBare,Janapratinidhi
+from gov_site_app.models import SuchanaItems, PhotoGallery, Headline, OrganizationDetail, GaupalikaBare, Janapratinidhi
 
 
 # Create your views here.
@@ -16,6 +16,6 @@ def index(request):
                      "photo_gallery_images": photogallery_list,
                      "headline": headline_list,
                      "organization_detail": organization_detail,
-                     "gaupalika_info":gaupalika_detail,
-                     "janapratinidhi_info":Janapratinidhi_detail
+                     "gaupalika_info": gaupalika_detail,
+                     "janapratinidhi_info": Janapratinidhi_detail
                      })
