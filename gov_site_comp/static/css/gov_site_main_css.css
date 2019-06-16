@@ -58,11 +58,8 @@ body {
     color: black;
 }
 
-.suchana_div {
-    border: 2px solid black;
-    border-top: 0px;
-    border-left: 0px;
-    background: #434259;
+.suchana_wrap_div{
+    border: .25rem solid rgba(255,255,255,.85);
 
 }
 
@@ -91,6 +88,7 @@ body {
 }
 
 .suchana_para {
+    font-size: 1.6em;
     background: #fff;
 }
 
@@ -119,4 +117,8 @@ body {
     font-family: Orbitron;
     letter-spacing: 7px;
 
+}
+
+.manage_suchana_height{
+    max-height: 900px;
 }
