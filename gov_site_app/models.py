@@ -27,6 +27,9 @@ class SuchanaItems(models.Model):
     Suchana3_suchana_photo = models.ImageField(
         upload_to='suchana', null=True, blank=True)
 
+    def __str__(self):
+        return "Suchana info "
+
 
 class PhotoGallery(models.Model):
     image1 = models.ImageField(upload_to='images', null=True, blank=True)
@@ -40,6 +43,9 @@ class PhotoGallery(models.Model):
     image5 = models.ImageField(upload_to='images', null=True, blank=True)
     descriptionOfImage5 = models.TextField(max_length=200, default="Title")
 
+    def __str__(self):
+        return "Photogallery "
+
 
 class Headline(models.Model):
     headline_topic = models.TextField(max_length=2000)
@@ -51,6 +57,9 @@ class OrganizationDetail(models.Model):
     website = models.TextField(max_length=100)
     wadaNumber = models.IntegerField()
 
+    def __str__(self):
+        return "Organization details"
+
 
 class GaupalikaBare(models.Model):
     jesthaNagarik = models.TextField(max_length=20)
@@ -60,6 +69,9 @@ class GaupalikaBare(models.Model):
     aapanga = models.TextField(max_length=100)
     balbalika = models.TextField(max_length=100)
     jamma = models.TextField(max_length=100)
+
+    def __str__(self):
+        return "Gaupalika Field "
 
 
 class Janapratinidhi(models.Model):
@@ -83,3 +95,6 @@ class Janapratinidhi(models.Model):
                                                                     default="Title")
     suchana_tatha_sanchar_pratinidhi_photo = models.ImageField(
         upload_to='images', null=True, blank=True)
+
+    def __str__(self):
+        return "Janapratinidhi bare"
