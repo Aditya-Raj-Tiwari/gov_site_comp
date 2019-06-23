@@ -274,25 +274,22 @@
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>{{ items.descriptionOfImage1 }}</p>
                                             </div>
-                               
                                         </div>
-                                                     {% endif %}
+                                        {% endif %}
                                         {% if items.image2 %}
                                         <div class="carousel-item active">
                                             <img src='{{ items.image2.url }}' class="d-block w-100" alt="..." onkeypress="" height="400px">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>{{ items.descriptionOfImage2 }}</p>
                                             </div>
-                                          
                                         </div>
-                                          {% endif %}
+                                        {% endif %}
                                         {% if items.image3 %}
                                         <div class="carousel-item">
                                             <img src='{{ items.image3.url }}' class="d-block w-100" alt="..." onkeypress="" height="400px">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <p>{{ items.descriptionOfImage3 }}</p>
                                             </div>
-                                            
                                         </div>
                                         {% endif %}
                                         {% if items.image4 %}
@@ -336,9 +333,9 @@
                                     <div class="col-auto suchana_para">
                                         <p>{{ suchana_itms.Suchana1_suchana_photo_description }}</p>
                                     </div>
-                                    {% endif %}
                                     <br><br><br><br><br><br><br><br>
                                 </div>
+                                {% endif %}
                                 {% if suchana_itms.Suchana2_heading %}
                                 <div class="carousel-item">
                                     <h3>{{ suchana_itms.Suchana2_heading }}</h3>
@@ -350,8 +347,8 @@
                                         <p>{{ suchana_itms.Suchana2_suchana_photo_description }}</p>
                                     </div>
                                     <br><br><br><br><br><br><br><br>
-                                    {% endif %}
                                 </div>
+                                {% endif %}
                                 {% if suchana_itms.Suchana3_heading %}
                                 <div class="carousel-item">
                                     <h3>{{ suchana_itms.Suchana3_heading }}</h3>
@@ -363,8 +360,8 @@
                                         <p>{{ suchana_itms.Suchana3_suchana_photo_description }}</p>
                                     </div>
                                     <br><br><br><br><br><br><br><br>
-                                    {% endif %}
                                 </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
