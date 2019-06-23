@@ -84,7 +84,7 @@ body {
 }
 
 .suchana_para {
-    font-size: 1.6em;
+    font-size: 1.3em;
     background: #fff;
 }
 
@@ -118,4 +118,10 @@ body {
 
 .manage_suchana_height {
     max-height: 900px;
+}
+
+.para_height_suchana{
+    text-align: left;
+    padding-top: 40px;
+    height: 426px;
 }

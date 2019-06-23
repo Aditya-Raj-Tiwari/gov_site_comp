@@ -325,6 +325,14 @@
                             <div class="carousel-inner">
                                 {% if suchana_itms.Suchana1_heading %}
                                 <div class="carousel-item active">
+                                    <!-- 
+                                        <img class="card-img-top" src="..." alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div> -->
                                     <!-- for images -->
                                     <div class="feature_article_wrapper">
                                         {% if suchana_itms.Suchana1_suchana_photo %}
@@ -342,8 +350,10 @@
                                                 </i>
                                             </div>
                                             <br>
-                                            <div class="feature_article_content suchana_para">
-                                                {{ suchana_itms.Suchana1_suchana_info}}
+                                            <div class="container para_height_suchana suchana_para">
+                                                <div class="feature_article_content ">
+                                                    {{ suchana_itms.Suchana1_suchana_info}}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -368,8 +378,10 @@
                                                 </i>
                                             </div>
                                             <br>
-                                            <div class="feature_article_content suchana_para">
-                                                {{ suchana_itms.Suchana2_suchana_info}}
+                                            <div class="container para_height_suchana suchana_para">
+                                                <div class="feature_article_content">
+                                                    {{ suchana_itms.Suchana2_suchana_info}}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -394,8 +406,10 @@
                                                 </i>
                                             </div>
                                             <br>
-                                            <div class="feature_article_content suchana_para">
-                                                {{ suchana_itms.Suchana3_suchana_info}}
+                                            <div class="container para_height_suchana suchana_para">
+                                                <div class="feature_article_content">
+                                                    {{ suchana_itms.Suchana3_suchana_info}}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
