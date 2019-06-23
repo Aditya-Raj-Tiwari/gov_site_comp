@@ -1,5 +1,5 @@
 from django.db import models
-
+from datetime import datetime
 
 # Create your models here.
 
@@ -7,25 +7,28 @@ class SuchanaItems(models.Model):
     Suchana1_heading = models.CharField(max_length=32, default="Title")
     Suchana1_suchana_photo_name = models.CharField(
         max_length=32, null=True, blank=True, default="Title")
-    Suchana1_suchana_photo_description = models.TextField(
+    Suchana1_suchana_info = models.TextField(
         max_length=200, null=True, blank=True, default="Title")
     Suchana1_suchana_photo = models.ImageField(
         upload_to='suchana', null=True, blank=True, default="Title")
+    Suchana1_date = models.DateTimeField(default=datetime.now, blank=True)
     Suchana2_heading = models.CharField(max_length=32, default="Title")
     Suchana2_suchana_photo_name = models.CharField(
         max_length=32, null=True, blank=True, default="Title")
-    Suchana2_suchana_photo_description = models.TextField(
+    Suchana2_suchana_info = models.TextField(
         max_length=200, null=True, blank=True, default="Title")
     Suchana2_suchana_photo = models.ImageField(
         upload_to='suchana', null=True, blank=True)
+    Suchana2_date = models.DateTimeField(default=datetime.now, blank=True)
     Suchana3_heading = models.CharField(
         max_length=32, null=True, blank=True, default="Title")
     Suchana3_suchana_photo_name = models.CharField(
         max_length=32, null=True, blank=True, default="Title")
-    Suchana3_suchana_photo_description = models.TextField(
+    Suchana3_suchana_info = models.TextField(
         max_length=200, null=True, blank=True, default="Title")
     Suchana3_suchana_photo = models.ImageField(
         upload_to='suchana', null=True, blank=True)
+    Suchana3_date = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
         return "Suchana info "

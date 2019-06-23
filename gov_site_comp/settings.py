@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gov_site_app',
+    'django.contrib.humanize'
 ]
 
 MIDDLEWARE = [

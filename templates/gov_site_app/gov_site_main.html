@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load humanize %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -318,55 +319,92 @@
                 <!-- for suchana only covers all height -->
                 <div class="col-lg-4">
                     <h5 id='sewaharu_id'>सुचना:</h5>
+                    {% for suchana_itms in suchana_items %}
                     <div class="suchana_wrap_div">
-                        {% for suchana_itms in suchana_items %}
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="15000">
                             <div class="carousel-inner">
                                 {% if suchana_itms.Suchana1_heading %}
                                 <div class="carousel-item active">
                                     <!-- for images -->
-                                    <h3>{{ suchana_itms.Suchana1_heading }}</h3>
-                                    {% if suchana_itms.Suchana1_suchana_photo %}
-                                    <img src='{{ suchana_itms.Suchana1_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
-                                    <br><br>
-                                    {% endif %}
-                                    <div class="col-auto suchana_para">
-                                        <p>{{ suchana_itms.Suchana1_suchana_photo_description }}</p>
+                                    <div class="feature_article_wrapper">
+                                        {% if suchana_itms.Suchana1_suchana_photo %}
+                                        <div class="feature_article_img">
+                                            <img class="img-responsive top_static_article_img" src="{{ suchana_itms.Suchana1_suchana_photo.url }}" alt="feature-top" height='300px' width="100%">
+                                        </div>
+                                        {% endif %}
+                                        <div class="feature_article_inner">
+                                            <div class="feature_article_title">
+                                                <h3 class="display-5">{{ suchana_itms.Suchana1_heading }}</h3>
+                                            </div>
+                                            <div class="feature_article_date">
+                                                <i class="far fa-clock">
+                                                    {{ suchana_itms.Suchana1_date | timesince }} ago
+                                                </i>
+                                            </div>
+                                            <br>
+                                            <div class="feature_article_content suchana_para">
+                                                {{ suchana_itms.Suchana1_suchana_info}}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <br><br><br><br><br><br><br><br>
                                 </div>
                                 {% endif %}
                                 {% if suchana_itms.Suchana2_heading %}
                                 <div class="carousel-item">
-                                    <h3>{{ suchana_itms.Suchana2_heading }}</h3>
-                                    {% if suchana_itms.Suchana2_suchana_photo %}
-                                    <img src='{{ suchana_itms.Suchana2_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
-                                    <br><br>>
-                                    {% endif %}
-                                    <div class="col-auto suchana_para">
-                                        <p>{{ suchana_itms.Suchana2_suchana_photo_description }}</p>
+                                    <!-- for images -->
+                                    <div class="feature_article_wrapper">
+                                        {% if suchana_itms.Suchana2_suchana_photo %}
+                                        <div class="feature_article_img">
+                                            <img class="img-responsive top_static_article_img" src="{{ suchana_itms.Suchana2_suchana_photo.url }}" alt="feature-top" height='300px' width="100%">
+                                        </div>
+                                        {% endif %}
+                                        <div class="feature_article_inner">
+                                            <div class="feature_article_title">
+                                                <h3 class="display-5">{{ suchana_itms.Suchana2_heading }}</h3>
+                                            </div>
+                                            <div class="feature_article_date">
+                                                <i class="far fa-clock">
+                                                    {{ suchana_itms.Suchana2_date | timesince }} ago
+                                                </i>
+                                            </div>
+                                            <br>
+                                            <div class="feature_article_content suchana_para">
+                                                {{ suchana_itms.Suchana2_suchana_info}}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <br><br><br><br><br><br><br><br>
                                 </div>
                                 {% endif %}
                                 {% if suchana_itms.Suchana3_heading %}
                                 <div class="carousel-item">
-                                    <h3>{{ suchana_itms.Suchana3_heading }}</h3>
-                                    {% if suchana_itms.Suchana3_suchana_photo %}
-                                    <img src='{{ suchana_itms.Suchana3_suchana_photo.url }}' class="d-block w-100" alt="..." height="300px" onkeypress="" width="100%">
-                                    {% endif %}
-                                    <br><br>
-                                    <div class="col-auto suchana_para">
-                                        <p>{{ suchana_itms.Suchana3_suchana_photo_description }}</p>
+                                    <!-- for images -->
+                                    <div class="feature_article_wrapper">
+                                        {% if suchana_itms.Suchana3_suchana_photo %}
+                                        <div class="feature_article_img">
+                                            <img class="img-responsive top_static_article_img" src="{{ suchana_itms.Suchana3_suchana_photo.url }}" alt="feature-top" height='300px' width="100%">
+                                        </div>
+                                        {% endif %}
+                                        <div class="feature_article_inner">
+                                            <div class="feature_article_title">
+                                                <h3 class="display-5">{{ suchana_itms.Suchana3_heading }}</h3>
+                                            </div>
+                                            <div class="feature_article_date">
+                                                <i class="far fa-clock">
+                                                    {{ suchana_itms.Suchana3_date | timesince }} ago
+                                                </i>
+                                            </div>
+                                            <br>
+                                            <div class="feature_article_content suchana_para">
+                                                {{ suchana_itms.Suchana3_suchana_info}}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <br><br><br><br><br><br><br><br>
                                 </div>
                                 {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
-                    <!-- for descriptions -->
                 </div>
                 <!-- for 2 small box at the end -->
                 <div class="col-lg-3">
