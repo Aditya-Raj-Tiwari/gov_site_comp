@@ -9,6 +9,9 @@ class HeadlineAdmin(admin.ModelAdmin):
     def has_add_permission(self, request, obj=None):
         return False
 
+    def has_delete_permission(self, request, obj=None):
+        return False
+
     def changeform_view(self, request, object_id=None, form_url='', extra_context=None):
         extra_context = extra_context or {}
         extra_context['show_save_and_add_another'] = False
@@ -22,6 +25,9 @@ class SuchanaItemsAdmin(admin.ModelAdmin):
     def has_add_permission(self, request, obj=None):
         return False
 
+    def has_delete_permission(self, request, obj=None):
+        return False
+
     def changeform_view(self, request, object_id=None, form_url='', extra_context=None):
         extra_context = extra_context or {}
         extra_context['show_save_and_continue'] = False
@@ -33,6 +39,9 @@ class SuchanaItemsAdmin(admin.ModelAdmin):
 class PhotoGalleryAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
         return False
 
     def changeform_view(self, request, object_id=None, form_url='', extra_context=None):
@@ -50,6 +59,9 @@ class JanapratinidhiAdmin(admin.ModelAdmin):
     def has_add_permission(self, request, obj=None):
         return False
 
+    def has_delete_permission(self, request, obj=None):
+        return False
+
     def changeform_view(self, request, object_id=None, form_url='', extra_context=None):
         extra_context = extra_context or {}
         extra_context['show_save_and_continue'] = False
@@ -64,6 +76,9 @@ class GaupalikaBareAdmin(admin.ModelAdmin):
     def has_add_permission(self, request, obj=None):
         return False
 
+    def has_delete_permission(self, request, obj=None):
+        return False
+
     def changeform_view(self, request, object_id=None, form_url='', extra_context=None):
         extra_context = extra_context or {}
         extra_context['show_save_and_continue'] = False
@@ -76,6 +91,9 @@ class GaupalikaBareAdmin(admin.ModelAdmin):
 class OrganizationDetailAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
         return False
 
     def changeform_view(self, request, object_id=None, form_url='', extra_context=None):
