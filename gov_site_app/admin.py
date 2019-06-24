@@ -7,7 +7,7 @@ class HeadlineAdmin(admin.ModelAdmin):
     list_editable = ('headline_topic',)
 
     def has_add_permission(self, request, obj=None):
-        return False
+        return True
 
     def has_delete_permission(self, request, obj=None):
         return False
@@ -23,7 +23,7 @@ class HeadlineAdmin(admin.ModelAdmin):
 class SuchanaItemsAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request, obj=None):
-        return False
+        return True
 
     def has_delete_permission(self, request, obj=None):
         return False
@@ -39,7 +39,7 @@ class SuchanaItemsAdmin(admin.ModelAdmin):
 class PhotoGalleryAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request, obj=None):
-        return False
+        return True
 
     def has_delete_permission(self, request, obj=None):
         return False
@@ -57,7 +57,7 @@ class PhotoGalleryAdmin(admin.ModelAdmin):
 class JanapratinidhiAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request, obj=None):
-        return False
+        return True
 
     def has_delete_permission(self, request, obj=None):
         return False
@@ -74,7 +74,7 @@ class JanapratinidhiAdmin(admin.ModelAdmin):
 class GaupalikaBareAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request, obj=None):
-        return False
+        return True
 
     def has_delete_permission(self, request, obj=None):
         return False
@@ -91,7 +91,7 @@ class GaupalikaBareAdmin(admin.ModelAdmin):
 class OrganizationDetailAdmin(admin.ModelAdmin):
 
     def has_add_permission(self, request, obj=None):
-        return False
+        return True
 
     def has_delete_permission(self, request, obj=None):
         return False
