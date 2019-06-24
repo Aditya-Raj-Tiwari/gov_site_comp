@@ -1,7 +1,7 @@
 body {
     background: #E4E4E0;
     /*IF YOU REALLY WANT TO FORCE THE ISSUE*/
-    font-family: 'Yantramanav', sans-serif;
+    font-family: 'Palanquin Dark', sans-serif;
     max-width: 1920px;
     max-height: 1080px;
 }
@@ -48,7 +48,7 @@ body {
 
 .samachar_div {
     margin-left: 20px;
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: white;
     background-color: #3a79d1;
 }
@@ -69,8 +69,11 @@ body {
 }
 
 .sewa_div {
-    max-height: 446px;
+    max-height: 430px;
     margin-bottom: 20px;
+}
+.manage_marquee{
+    font-size: 1.3em;
 }
 
 .photogal_div {
@@ -80,7 +83,7 @@ body {
 
 .janapratinidhi_div {
     max-width: 100%;
-    height: 330px;
+    height: 290px;
 }
 
 .suchana_para {
@@ -94,7 +97,7 @@ body {
 
 .third_element_thirdrow {
     margin-top: 30px;
-    height: 330px;
+    height: 250px;
 }
 
 .for_clock {
@@ -122,6 +125,6 @@ body {
 
 .para_height_suchana{
     text-align: left;
-    padding-top: 40px;
-    height: 426px;
+    padding-top: 20px;
+    height: 350px;
 }
