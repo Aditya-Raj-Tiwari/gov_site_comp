@@ -8,7 +8,7 @@ class SuchanaItems(models.Model):
     Suchana1_suchana_photo_name = models.CharField(
         max_length=32, null=True, blank=True, default="Title")
     Suchana1_suchana_info = models.TextField(
-        max_length=200, null=True, blank=True, default="Title")
+        max_length=250, null=True, blank=True, default="Title")
     Suchana1_suchana_photo = models.ImageField(
         upload_to='suchana', null=True, blank=True, default="Title")
     Suchana1_date = models.DateTimeField(default=datetime.now, blank=True)
@@ -16,7 +16,7 @@ class SuchanaItems(models.Model):
     Suchana2_suchana_photo_name = models.CharField(
         max_length=32, null=True, blank=True, default="Title")
     Suchana2_suchana_info = models.TextField(
-        max_length=200, null=True, blank=True, default="Title")
+        max_length=250, null=True, blank=True, default="Title")
     Suchana2_suchana_photo = models.ImageField(
         upload_to='suchana', null=True, blank=True)
     Suchana2_date = models.DateTimeField(default=datetime.now, blank=True)
@@ -25,7 +25,7 @@ class SuchanaItems(models.Model):
     Suchana3_suchana_photo_name = models.CharField(
         max_length=32, null=True, blank=True, default="Title")
     Suchana3_suchana_info = models.TextField(
-        max_length=200, null=True, blank=True, default="Title")
+        max_length=250, null=True, blank=True, default="Title")
     Suchana3_suchana_photo = models.ImageField(
         upload_to='suchana', null=True, blank=True)
     Suchana3_date = models.DateTimeField(default=datetime.now, blank=True)
