@@ -114,14 +114,11 @@
                                         <div class="carousel-item">
                                             {% endif %}
                                             <img src='{{ pictures.image.url }}' height="360px" width="100%">
-                                           
                                         </div>
                                         {% endfor %}
                                     </div>
-                                    <br>
+                                   
                                 </div>
-                                <br>
-                                <br>
                             </div>
                             <div class="w-100"></div>
                             <!-- *for photo gallery with scrollling image only -->
@@ -153,7 +150,7 @@
                                             {% if items.image1 %}
                                             <div class="carousel-item">
                                                 <img src='{{ items.image1.url }}' alt="..." onkeypress=""
-                                                    class="d-block w-100" onkeypress="" height="340px; width:370px;">
+                                                    class="d-block w-100" onkeypress="" height="340px" width="370px">
                                                 <div class="carousel-caption d-none d-md-block">
                                                     <p>{{ items.descriptionOfImage1 }}</p>
                                                 </div>
@@ -189,7 +186,7 @@
                                             {% if items.image5 %}
                                             <div class="carousel-item">
                                                 <img src='{{ items.image5.url }}' class="d-block w-100" alt="..." h
-                                                    onkeypress="" height="340px; width:370px;">
+                                                    onkeypress="" height="340px" width="370px">
                                                 <div class="carousel-caption d-none d-md-block">
                                                     <p>{{ items.descriptionOfImage5 }}</p>
                                                 </div>

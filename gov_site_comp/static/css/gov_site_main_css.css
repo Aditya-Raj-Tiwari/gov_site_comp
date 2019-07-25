@@ -18,7 +18,6 @@ body {
     max-width: 1920px;
     max-height: 1080px;
     font-size: 0.9rem;
-    box-sizing: border-box;
 }
 
 .body_div {
@@ -27,7 +26,7 @@ body {
 }
 
 /* =========================
-*Header
+**Header
 ============================= */
 .heading_top {
     background-color: #E4E4E0;
@@ -81,7 +80,7 @@ body {
 }
 
 
-.manage_para-gaupalika {
+.manage_para {
     font-size: 1.2em;
 
 }
@@ -96,7 +95,7 @@ body {
 }
 
 .photogal_div {
-    margin-top: 6px;
+    margin-top: 20px;
     max-height: 450px;
     max-width: 100%;
 }
@@ -104,14 +103,12 @@ body {
 .janapratinidhi_div {
     max-width: 100%;
     height: 380px;
-    padding: 0;
-    margin: 0;
 }
 
 
 .sewa_div {
     max-height: 430px;
-
+    
 }
 
 .third_element_thirdrow {
@@ -123,8 +120,6 @@ body {
 .jana_pratinidhi {
     height: 380px;
 }
-
-
 .suchana_para {
     font-size: 1em;
     background: #fff;
