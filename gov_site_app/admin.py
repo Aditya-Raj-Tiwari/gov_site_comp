@@ -1,5 +1,5 @@
 from django.contrib import admin
-from gov_site_app.models import SuchanaItems, PhotoGallery, Headline, OrganizationDetail, GaupalikaBare, Janapratinidhi
+from gov_site_app.models import Sewa,SuchanaItems, PhotoGallery, Headline, OrganizationDetail, GaupalikaBare, Janapratinidhi
 
 
 class HeadlineAdmin(admin.ModelAdmin):
@@ -105,12 +105,14 @@ class OrganizationDetailAdmin(admin.ModelAdmin):
         return super(OrganizationDetailAdmin, self).changeform_view(request, object_id, extra_context=extra_context)
 
 
+
 admin.site.register(SuchanaItems, SuchanaItemsAdmin)
 admin.site.register(PhotoGallery, PhotoGalleryAdmin)
 admin.site.register(Headline, HeadlineAdmin)
 admin.site.register(OrganizationDetail, OrganizationDetailAdmin)
 admin.site.register(GaupalikaBare, GaupalikaBareAdmin)
 admin.site.register(Janapratinidhi, JanapratinidhiAdmin)
+admin.site.register(Sewa)
 
 # class ListingAdmin(admin.ModelAdmin):
 #     list_display = ('id', 'title', 'is_published',

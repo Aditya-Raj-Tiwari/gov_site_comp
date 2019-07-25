@@ -101,3 +101,11 @@ class Janapratinidhi(models.Model):
 
     def __str__(self):
         return "Janapratinidhi bare"
+
+
+class Sewa(models.Model):
+    image = models.ImageField(upload_to='images', null=True, blank=True)
+    descriptionOfImage = models.TextField(max_length=200, default="Title")
+
+    def __str__(self):
+        return "Sewa Photo"

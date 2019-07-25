@@ -1,8 +1,24 @@
+/* =====================================
+*Fonts-used
+===================================== */
+@font-face {
+    font-family: 'Ganesh';
+    src: url('../webfonts/NotoSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =====================================
+*BODY
+===================================== */
 body {
     background: #E4E4E0;
-    font-family: 'Palanquin Dark', sans-serif;
+    font-family: 'Ganesh', sans-serif;
     max-width: 1920px;
     max-height: 1080px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
 }
 
 .body_div {
@@ -10,6 +26,9 @@ body {
     margin-right: 10px;
 }
 
+/* =========================
+*Header
+============================= */
 .heading_top {
     background-color: #E4E4E0;
     color: blue;
@@ -39,11 +58,15 @@ body {
 
 }
 
+.heading-waving_img {
+    padding: 15px 0;
+    position: absolute;
+    right: 0;
+}
+
 .any_headline_span {
     text-decoration: underline;
 }
-
-.span_ghatana_tatha_samachar {}
 
 .samachar_div {
     margin-left: 20px;
@@ -58,25 +81,22 @@ body {
 }
 
 
-.manage_para {
+.manage_para-gaupalika {
     font-size: 1.2em;
-    
+
 }
 
 .carousel-caption {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.sewa_div {
-    max-height: 430px;
-    margin-bottom: 20px;
-}
-.manage_marquee{
-    font-size: 1.3em;a
+
+.manage_marquee {
+    font-size: 1.3em;
 }
 
 .photogal_div {
-    margin-top: 20px;
+    margin-top: 6px;
     max-height: 450px;
     max-width: 100%;
 }
@@ -84,31 +104,42 @@ body {
 .janapratinidhi_div {
     max-width: 100%;
     height: 380px;
+    padding: 0;
+    margin: 0;
 }
+
+
+.sewa_div {
+    max-height: 430px;
+
+}
+
+.third_element_thirdrow {
+    margin: 2px 0;
+    height: 220px;
+    font-size: 1rem;
+}
+
+.jana_pratinidhi {
+    height: 380px;
+}
+
 
 .suchana_para {
     font-size: 1em;
     background: #fff;
 }
 
-
-.third_element_thirdrow {
-    margin-top: 20px;
-    height: 220px;
-}
-
-
-
 .manage_suchana_height {
     max-height: 900px;
 }
 
-.para_height_suchana{
+.para_height_suchana {
     text-align: left;
     padding-top: 20px;
     height: 125px;
 }
 
-.heading_height_suchana{
+.heading_height_suchana {
     font-size: 1.6em;
 }
